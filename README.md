@@ -1,10 +1,10 @@
-# Portofolio Andi Pratama
+# Portofolio Iffah Fandantya Anggara Putri
 Website portofolio pribadi yang saya buat di Kelas Industri UBIG
 (Paket 1, Minggu 01 sampai 05).
 Website ini tampil rapi di ponsel, tablet, dan laptop.
 ## Tampilan
-![Tampilan beranda portofolio](img/proyek-jadwal.png)
-## Fitur# Portofolio Andi Pratama
+![Tampilan beranda portofolio](img/Cuplikan layar 2026-10-27 131802.png)
+## Fitur# Portofolio Iffah Fandantya Anggara Putri
 Website portofolio pribadi yang saya buat di Kelas Industri UBIG
 (Paket 1, Minggu 01 sampai 05).
 Website ini tampil rapi di ponsel, tablet, dan laptop.
@@ -34,4 +34,4 @@ jadwal belajar
 - Git dan GitHub
 ## Tautan
 - Website: menyusul setelah *deploy* ke Vercel
-- Dibuat oleh: Andi Pratama, SMK Mitra
+- Dibuat oleh: Iffah Fandantya, SMKs Brantas Karangkates
