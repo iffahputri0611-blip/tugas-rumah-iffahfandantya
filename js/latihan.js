@@ -32,3 +32,27 @@ function rapor(namaSiswa, tugas, uts, uas) {
     return `${namaSiswa}: rata-rata ${rata}, predikat $
 {predikat(rata)}`;
 }
+// 4. Hasil nilai Iffah
+const rataRata = hitungRataRata(nilaiTugas, nilaiUts, nilaiUas);
+const lulus = rataRata >= kkm;
+const dapatSertifikat = lulus && kehadiran >= 80;
+console.log(`Rata-rata nilai: ${rataRata}`);
+console.log(`Predikat: ${predikat(rataRata)}`);
+console.log(`Lulus KKM: ${lulus}`);
+console.log(`Dapat sertifikat: ${dapatSertifikat}`);
+// Pesan kelulusan
+if (lulus) {
+    console.log("Selamat, kamu lulus KKM!");
+} else {
+    console.log("Tetap semangat, ikuti remedial ya.");
+}
+// 5. Menguji fungsi predikat dengan beberapa nilai
+console.log(`predikat(95) = ${predikat(95)}`); // A
+console.log(`predikat(90) = ${predikat(90)}`); // A, tepat di batas
+console.log(`predikat(84) = ${predikat(84)}`); // B
+console.log(`predikat(70) = ${predikat(70)}`); // C
+console.log(`predikat(69) = ${predikat(69)}`); // D
+// 6. Rapor beberapa siswa
+console.log(rapor("Iffah", 85, 78, 89));
+console.log(rapor("Sinta", 92, 88, 96));
+console.log(rapor("Budi", 70, 65, 72));
