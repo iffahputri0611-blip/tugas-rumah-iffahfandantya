@@ -1,6 +1,28 @@
-/* Gaya portofolio Iffah Fandantya Anggara Putri
-   Palet: #1D3557, #E63946, #F1FAEE
-   Tata letak: Responsive */
+/* Gaya portofolio Meta Dwi Putri Lestari */
+
+/* 0. Variabel warna mode terang */
+:root {
+  --warna-utama: #1D3557;
+  --warna-judul: #1D3557;
+  --warna-aksen: #E63946;
+  --warna-tautan: #E63946;
+  --warna-latar: #F1FAEE;
+  --warna-teks: #483e3e;
+  --warna-kartu: #FFFFFF;
+  --warna-garis: #DDDDDD;
+  --warna-ikon-menu: #dddd;
+}
+
+body.gelap {
+  --warna-utama: #0e1c33;
+  --warna-judul: #bfddde;
+  --warna-tautan: #FF8A8A;
+  --warna-latar: #2f2f33;
+  --warna-teks: #E3E8EE;
+  --warna-kartu: #24313f;
+  --warna-garis: #34465A;
+  --warna-ikon-menu: #fff;
+}
 
 /* 1. Reset */
 * {
@@ -8,23 +30,16 @@
   margin: 0;
 }
 
+.keterangan {
+  font-size: 0.875rem;
+}
+
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* 2. Variabel warna */
-:root {
-  --warna-utama: #1D3557;
-  --warna-judul: #1D3557;
-  --warna-aksen: #E63946;
-  --warna-tautan: #E63946;
-  --warna-latar: #F1FAEE;
-  --warna-teks: #333333;
-  --warna-kartu: #FFFFFF;
-  --warna-garis: #DDDDDD;
-}
-
+/* 2. Dasar halaman: warna dan huruf */
 body {
   font-family: "Inter", Arial, sans-serif;
   font-size: 1rem;
@@ -64,7 +79,7 @@ a {
 
 header {
   background-color: var(--warna-utama);
-  color: #FFFFFF;
+  color: var(--warna-kartu);
   padding: 1rem 0;
 }
 
@@ -83,7 +98,6 @@ header h1 {
 
 nav ul {
   display: flex;
-  flex-wrap: wrap;
   gap: 0.25rem;
   padding: 0;
   margin: 0;
@@ -99,18 +113,14 @@ nav a {
   text-decoration: none;
 }
 
-/* Menu navigasi */
+/* Menu ponsel */
 .menu-laptop {
-  display: block;
-}
-
-.menu-ponsel {
   display: none;
 }
 
 .menu-ponsel summary {
   padding: 0.5rem 0.75rem;
-  border: 1px solid #FFFFFF;
+  border: 1px solid var(--warna-ikon-menu);
   border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
@@ -200,7 +210,7 @@ td {
 
 th {
   background-color: var(--warna-utama);
-  color: #FFFFFF;
+  color: var(--warna-kartu);
 }
 
 /* 6. Form */
@@ -228,21 +238,17 @@ button {
   border: none;
   border-radius: 6px;
   background-color: var(--warna-aksen);
-  color: #FFFFFF;
+  color: var(--warna-kartu);
   font-family: inherit;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
 }
 
-.keterangan {
-  font-size: 0.875rem;
-}
-
 /* 7. Footer */
 footer {
   background-color: var(--warna-utama);
-  color: #F1FAEE;
+  color: var(--warna-latar);
   text-align: center;
   padding: 1.5rem;
 }
@@ -252,10 +258,10 @@ footer p {
 }
 
 footer a {
-  color: #FFFFFF;
+  color: var(--warna-kartu);
 }
 
-/* 8. Tablet */
+/* 8. Tablet: lebar layar 768px ke atas */
 @media (min-width: 768px) {
   .menu-laptop {
     display: block;
@@ -276,7 +282,7 @@ footer a {
   }
 }
 
-/* 9. Laptop */
+/* 9. Laptop: lebar layar 1024px ke atas */
 @media (min-width: 1024px) {
   main {
     padding: 2.5rem 0;
@@ -291,11 +297,12 @@ footer a {
   }
 }
 
-/* 10. Tombol tema, filter, dan label */
+/* 10. Tombol tema */
 .tombol-tema {
   padding: 0.5rem 0.9rem;
   border: 2px solid #FFFFFF;
   background-color: transparent;
+  color: #FFFFFF;
   font-size: 0.9rem;
 }
 
@@ -312,13 +319,12 @@ footer a {
   background-color: var(--warna-kartu);
   color: var(--warna-judul);
 }
-
+/* Tombol filter yang sedang aktif */
 .tombol-filter.aktif {
-  background-color: var(--warna-aksen);
-  border-color: var(--warna-aksen);
-  color: #FFFFFF;
+    background-color: var(--warna-aksen);
+    color: #FFFFFF;
+    border-color: var(--warna-aksen);
 }
-
 .label {
   display: inline-block;
   padding: 0.1rem 0.6rem;
@@ -330,13 +336,54 @@ footer a {
   font-weight: 600;
 }
 
-/* 11. Tema gelap */
-body.gelap {
-  --warna-utama: #0B1526;
-  --warna-judul: #A8DADC;
-  --warna-tautan: #FF8A8A;
-  --warna-latar: #121A24;
-  --warna-teks: #E3E8EE;
-  --warna-kartu: #1C2836;
-  --warna-garis: #34465A;
+
+/* 11. Tampilan kartu proyek */
+
+#daftar-proyek {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.kartu-proyek {
+    background-color: var(--warna-kartu);
+    padding: 1rem;
+    border: 1px solid var(--warna-garis);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.kartu-proyek img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--warna-garis);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.kartu-proyek h3 {
+    margin-bottom: 0.5rem;
+}
+
+.kartu-proyek p {
+    margin-bottom: 0.5rem;
+}
+
+/* Tampilan HP */
+@media (max-width: 600px) {
+    #daftar-proyek {
+        grid-template-columns: 1fr;
+    }
+}
+
+.tambah-skill {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    color: var(--warna-garis)
 }

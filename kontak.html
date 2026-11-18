@@ -4,8 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iffah Fandantya Anggara Putri | Proyek</title>
-  <link rel="icon" href="img/foto-profil.png">
+  <title>Iffah Fandantya Anggara Putri | Kontak</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap"
@@ -15,56 +14,79 @@
 </head>
 
 <body>
-  <header>
-    <div class="container navbar">
-      <h1>Iffah Fandantya Anggara Putri</h1>
-      <nav class="menu-laptop">
+<header>
+  <div class="container navbar">
+    <h1>Iffah Fandantya Anggara Putri</h1>
+    <nav class="menu-laptop">
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="proyek.html">Proyek</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+        <li><a href="kalkulator.html">Kalkulator</a></li>
+      </ul>
+    </nav>
+    <!-- Tantangan: menu ponsel yang bisa dibuka-tutup -->
+    <details class="menu-ponsel">
+      <summary>Menu</summary>
+      <nav>
         <ul>
           <li><a href="index.html">Beranda</a></li>
           <li><a href="proyek.html">Proyek</a></li>
           <li><a href="kontak.html">Kontak</a></li>
+          <li><a href="kalkulator.html">Kalkulator</a></li>
         </ul>
       </nav>
-      <button type="button" id="tombol-tema" class="tombol-tema">Mode Gelap</button>
-    </div>
+    </details>
+    <button type="button" id="tombol-tema" class="tombol-tema">Mode Gelap</button>
+  </div>
   </header>
 
   <main>
     <div class="container">
-      <h2>Proyek Saya</h2>
-      <p>Kumpulan hasil belajar saya di Kelas Industri UBIG.</p>
-
-      <div class="filter">
-        <button type="button" class="tombol-filter aktif" id="filter-semua">Semua</button>
-        <button type="button" class="tombol-filter" id="">HTML</button>
-        <button type="button" class="tombol-filter" id="filter-css">CSS</button>
-        <button type="button" class="tombol-filter" id="filter-javascript">JavaScript</button>
-      </div>
-      <p id="jumlah-proyek"></p>
-      <div id="skill-baru"></div>
-      <select id="level-baru">
-        <option value="">Pilih Level</option>
-        <option value="pemula">Pemula</option>
-        <option value="menengah">Menengah</option>
-        <option value="mahir">Mahir</option>
-      </select>
-      <textarea id="pesan-skill" placeholder="Tulis keahlian baru..."></textarea>
-      <div class="daftar-kartu" id="daftar-proyek"></div>
-
       <section class="kartu">
-        <h2>Pertanyaan yang Sering Diajukan</h2>
-        <details>
-          <summary>Bahasa apa yang dipakai untuk membuat proyek ini?</summary>
-          <p>Proyek di halaman ini dibuat dengan HTML, CSS, dan JavaScript. Pilih tombol kategori di atas untuk melihat
-            proyek per bahasa.</p>
-        </details>
+        <h2>Hubungi Saya</h2>
+        <p>Punya pertanyaan atau ingin bekerja sama? Isi form berikut.</p>
+
+        <form>
+          <p>
+            <label for="nama">Nama lengkap</label><br>
+            <input type="text" id="nama" name="nama" placeholder="Contoh: Budi Santoso" required>
+          </p>
+          <p>
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" placeholder="nama@gmail.com" required>
+          </p>
+          <p>
+            <label for="hp">Nomor HP</label><br>
+            <input type="tel" id="hp" name="hp" placeholder="081234567890" required>
+          </p>
+          <p>
+            <label for="keperluan">Keperluan</label><br>
+            <select id="keperluan" name="keperluan" required>
+              <option value="">-- Pilih keperluan --</option>
+              <option value="bertanya">Bertanya</option>
+              <option value="kerja-sama">Kerja sama proyek</option>
+              <option value="lainnya">Lainnya</option>
+            </select>
+          </p>
+          <p>
+            <label for="pesan">Pesan</label><br>
+            <textarea id="pesan" name="pesan" rows="5" cols="40" maxlength="300" placeholder="Tulis pesanmu di sini"
+              required></textarea><br>
+            <span id="hitung-karakter" class="keterangan">0/300 karakter</span>
+          </p>
+          <button type="submit">Kirim Pesan</button>
+        </form>
       </section>
     </div>
   </main>
 
   <footer>
-    <p>&copy; 2026 Iffah Fandantya Anggara Putri</p>
-    <p>Portofolio Kelas Industri UBIG</p>
+    <p>Kontak: <a href="mailto:andi.pratama@example.com">andi.pratama@example.com</a> |
+      <a href="https://github.com/" target="_blank">GitHub</a> |
+      <a href="https://www.youtube.com/" target="_blank">YouTube</a>
+    </p>
+    <p>&copy; 2026 Iffah Fandantya Anggara Putri. Dibuat di Kelas Industri UBIG.</p>
   </footer>
 </body>
 
