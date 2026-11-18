@@ -8,6 +8,7 @@ serta dirancang agar tetap nyaman dibuka di ponsel, tablet, dan laptop.
 
 ![Tampilan beranda portofolio](img/proyek-profil.png)
 
+
 ## Fitur
 - Halaman **Beranda** berisi profil, hobi, cita-cita, keahlian, dan jadwal belajar.
 - Halaman **Proyek** berisi daftar proyek dalam bentuk kartu.
