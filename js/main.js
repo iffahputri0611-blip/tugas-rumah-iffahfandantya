@@ -204,3 +204,17 @@ if (daftarRepo) {
   );
   observer.observe(sectionRepo);
 }
+// Tombol sembunyikan dan tampilkan repositori
+const tombolRepo = document.querySelector("#tombol-repo");
+
+if (tombolRepo && daftarRepo) {
+  tombolRepo.addEventListener("click", () => {
+    daftarRepo.classList.toggle("tersembunyi");
+
+    if (daftarRepo.classList.contains("tersembunyi")) {
+      tombolRepo.textContent = "Tampilkan Repositori";
+    } else {
+      tombolRepo.textContent = "Sembunyikan Repositori";
+    }
+  });
+}
